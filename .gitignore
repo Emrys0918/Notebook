@@ -1,0 +1,2 @@
+# Ignore nested repo backup
+pytorch_notebook/.git.bak/
