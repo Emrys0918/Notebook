@@ -124,6 +124,34 @@ git commit -m "init"
 git push -u origin master
 ```
 
----
 
-有需要，我可以一键帮你完成：添加 SSH 公钥、修复子仓库冲突、增补 .gitignore、批量重命名或筛选提交等操作。
+如果你不需要保留 Git 历史：
+
+## 1. 删除 .git 目录
+```bash
+rm -rf .git
+```
+
+## 2. 重新初始化
+
+```bash
+git init
+```
+## 3. 确保 .gitignore 正确配置（添加 data/ 等大文件目录）
+```bash
+echo "data/" >> .gitignore
+echo "__pycache__/" >> .gitignore
+echo "*.pyc" >> .gitignore
+```
+
+## 4. 提交
+```bash
+git add -A
+git commit -m "Initial commit"
+```
+
+## 5. 推送到远程
+```bash
+git remote add origin https://github.com/Emrys0918/LLM.git
+git push -u origin master --force
+```
